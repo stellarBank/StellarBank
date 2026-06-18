@@ -1,0 +1,136 @@
+{
+  "name": "stellarbank",
+  "version": "2.4.1",
+  "description": "Cross-border remittance platform for emerging markets powered by Stellar blockchain",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/presidojay1/StellarBank.git"
+  },
+  "author": {
+    "name": "StellarBank Team",
+    "email": "dev@stellarbank.io",
+    "url": "https://stellarbank.io"
+  },
+  "contributors": [
+    {
+      "name": "Presido Jay",
+      "email": "presidojay1@users.noreply.github.com",
+      "role": "Project Lead & Architecture"
+    },
+    {
+      "name": "Abayomi Cornelius",
+      "email": "abayomicornelius@users.noreply.github.com",
+      "role": "Smart Contracts & Backend"
+    },
+    {
+      "name": "Prod By Corne",
+      "email": "prodbycorne@users.noreply.github.com", 
+      "role": "Frontend & Mobile Development"
+    },
+    {
+      "name": "Chonilius",
+      "email": "chonilius@users.noreply.github.com",
+      "role": "DevOps & Infrastructure"
+    },
+    {
+      "name": "Abayomi Wav",
+      "email": "abayomiwav@users.noreply.github.com",
+      "role": "QA & Testing"
+    }
+  ],
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend",
+    "mobile"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev", 
+    "dev:mobile": "cd mobile && npm start",
+    "build": "npm run build:frontend && npm run build:backend && npm run build:contracts",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm run build",
+    "build:contracts": "cd contracts && cargo build --target wasm32-unknown-unknown --release",
+    "build:mobile:android": "cd mobile && npm run build:android",
+    "build:mobile:ios": "cd mobile && npm run build:ios",
+    "test": "npm run test:backend && npm run test:frontend && npm run test:contracts && npm run test:mobile",
+    "test:backend": "cd backend && npm test",
+    "test:frontend": "cd frontend && npm test",
+    "test:contracts": "cd contracts && cargo test",
+    "test:mobile": "cd mobile && npm test",
+    "test:e2e": "npm run test:e2e:frontend && npm run test:e2e:mobile",
+    "test:e2e:frontend": "cd frontend && npm run e2e",
+    "test:e2e:mobile": "cd mobile && npm run test:e2e",
+    "lint": "npm run lint:frontend && npm run lint:backend && npm run lint:mobile",
+    "lint:frontend": "cd frontend && npm run lint",
+    "lint:backend": "cd backend && npm run lint",
+    "lint:mobile": "cd mobile && npm run lint",
+    "lint:fix": "npm run lint:frontend -- --fix && npm run lint:backend -- --fix && npm run lint:mobile -- --fix",
+    "install:all": "npm install && npm run install:frontend && npm run install:backend && npm run install:mobile",
+    "install:frontend": "cd frontend && npm install",
+    "install:backend": "cd backend && npm install", 
+    "install:mobile": "cd mobile && npm install",
+    "clean": "npm run clean:frontend && npm run clean:backend && npm run clean:mobile && npm run clean:contracts",
+    "clean:frontend": "cd frontend && npm run clean",
+    "clean:backend": "cd backend && rm -rf dist && rm -rf node_modules",
+    "clean:mobile": "cd mobile && npm run clean",
+    "clean:contracts": "cd contracts && cargo clean",
+    "docker:dev": "docker-compose up -d",
+    "docker:prod": "docker-compose -f docker-compose.prod.yml up -d",
+    "docker:build": "docker-compose build",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "deploy:testnet": "cd contracts && ./scripts/deploy-testnet.sh",
+    "deploy:mainnet": "cd contracts && ./scripts/deploy-mainnet.sh",
+    "migrate:up": "cd backend && npm run migrate",
+    "migrate:down": "cd backend && npm run migrate:rollback",
+    "db:seed": "cd backend && npm run seed",
+    "db:reset": "cd backend && npm run db:reset",
+    "docs:generate": "cd backend && npm run docs:generate",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.1.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
+  },
+  "keywords": [
+    "remittance",
+    "stellar",
+    "blockchain",
+    "fintech",
+    "cross-border-payments",
+    "emerging-markets",
+    "nigeria",
+    "africa",
+    "mobile-money",
+    "stablecoins",
+    "web3",
+    "defi"
+  ],
+  "funding": {
+    "type": "grant",
+    "url": "https://stellar.org/foundation/grants"
+  },
+  "bugs": {
+    "url": "https://github.com/presidojay1/StellarBank/issues"
+  },
+  "homepage": "https://stellarbank.io"
+}
