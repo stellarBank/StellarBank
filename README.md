@@ -66,7 +66,7 @@ StellarBank/
 ### 🚀 One-Command Setup
 ```bash
 # Clone the repository
-git clone https://github.com/your-org/StellarBank.git
+git clone https://github.com/stellarBank/StellarBank.git
 cd StellarBank
 
 # Start all services
