@@ -1,6 +1,6 @@
 # StellarBank
 
-Cross-border remittances powered by Stellar.
+Cross-border remittance platform for emerging markets using Stellar blockchain technology
 
 ## Overview
 
