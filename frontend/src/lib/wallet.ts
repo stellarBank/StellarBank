@@ -35,3 +35,4 @@ export async function signXdr(xdr: string, publicKey: string): Promise<string> {
   }
   return result.signedTxXdr;
 }
+

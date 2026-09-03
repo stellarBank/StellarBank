@@ -17,3 +17,4 @@ describe('AppError', () => {
     expect(err.statusCode).toBe(400);
   });
 });
+

@@ -208,3 +208,4 @@ build of the contract) on every push/PR to `main`.
 ## License
 
 MIT — see [LICENSE](./LICENSE).
+

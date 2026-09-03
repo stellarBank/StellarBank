@@ -9,3 +9,4 @@ export const tokenAContractId = process.env.NEXT_PUBLIC_TOKEN_A_CONTRACT_ID || '
 export const tokenBContractId = process.env.NEXT_PUBLIC_TOKEN_B_CONTRACT_ID || '';
 export const tokenACode = process.env.NEXT_PUBLIC_TOKEN_A_CODE || 'Asset A';
 export const tokenBCode = process.env.NEXT_PUBLIC_TOKEN_B_CODE || 'Asset B';
+

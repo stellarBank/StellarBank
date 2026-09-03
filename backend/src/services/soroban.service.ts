@@ -186,3 +186,4 @@ export async function submitSignedTransaction(signedXdr: string): Promise<Submit
 export function accountFromPublicKey(publicKey: string): Account {
   return new Account(publicKey, '0');
 }
+

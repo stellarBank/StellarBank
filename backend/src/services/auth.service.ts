@@ -38,3 +38,4 @@ export class AuthService {
     return Array.from({ length: 8 }, () => crypto.randomBytes(5).toString('hex'));
   }
 }
+

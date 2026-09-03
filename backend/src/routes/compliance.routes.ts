@@ -30,3 +30,4 @@ router.get('/status', async (req: AuthedRequest, res: Response) => {
 });
 
 export default router;
+

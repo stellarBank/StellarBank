@@ -99,3 +99,4 @@ jobs:
       - name: Build contract WASM
         working-directory: ./contracts
         run: cargo build --target wasm32v1-none --release
+

@@ -15,3 +15,4 @@ export class NotificationService {
     logger.info('(stub) Would send welcome SMS', { phone, firstName });
   }
 }
+

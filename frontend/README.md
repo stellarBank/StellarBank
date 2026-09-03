@@ -51,3 +51,4 @@ message instead of pretending there's data.
   asynchronously, so on first render a logged-in user briefly looks logged
   out. Every auth-guarded page waits for `hasHydrated` before deciding to
   redirect.
+

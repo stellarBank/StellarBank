@@ -23,3 +23,4 @@ export function errorHandler(
     message: 'An unexpected error occurred',
   });
 }
+

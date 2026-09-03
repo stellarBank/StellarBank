@@ -282,3 +282,4 @@ fn test_remove_liquidity_rejects_more_than_owned() {
     let result = client.try_remove_liquidity(&lp, &(lp_tokens + 1));
     assert_eq!(result, Err(Ok(PoolError::InsufficientLiquidity)));
 }
+

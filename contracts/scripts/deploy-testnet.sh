@@ -83,3 +83,4 @@ NEXT_PUBLIC_TOKEN_B_CODE=$ASSET_B_CODE
      add_liquidity --user $ADMIN --amount_a 10000000000 --amount_b 10000000000
 ======================================================================
 EOF
+

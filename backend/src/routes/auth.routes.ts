@@ -32,3 +32,4 @@ router.post('/2fa/enable', authMiddleware, (req, res) => controller.enable2FA(re
 router.post('/2fa/verify', authMiddleware, (req, res) => controller.verify2FA(req, res));
 
 export default router;
+

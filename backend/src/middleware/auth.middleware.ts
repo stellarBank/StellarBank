@@ -29,3 +29,4 @@ export function authMiddleware(req: AuthedRequest, res: Response, next: NextFunc
     res.status(401).json({ error: 'Unauthorized', message: 'Invalid or expired token' });
   }
 }
+

@@ -27,3 +27,4 @@ router.get('/me', async (req: AuthedRequest, res: Response) => {
 });
 
 export default router;
+

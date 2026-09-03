@@ -66,3 +66,4 @@ No webhooks, no SDKs, no multi-currency wallets beyond the two tokens the
 deployed pool trades, no analytics endpoints. These were in an earlier,
 much larger draft of this doc describing a product vision well beyond the
 hackathon MVP's scope — removed rather than left as aspirational fiction.
+
