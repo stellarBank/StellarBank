@@ -1,0 +1,26 @@
+[package]
+name = "remittance-pool"
+version = "0.1.0"
+edition = "2021"
+description = "StellarBank remittance liquidity pool contract for cross-border transfers"
+repository = "https://github.com/stellarBank/StellarBank"
+license = "MIT"
+keywords = ["stellar", "soroban", "remittance", "defi", "cross-border"]
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+soroban-sdk = { workspace = true }
+
+[dev-dependencies]
+soroban-sdk = { workspace = true, features = ["testutils"] }
+ed25519-dalek = { workspace = true }
+rand_core = { workspace = true }
+rand_chacha = { workspace = true }
+
+[features]
+testutils = ["soroban-sdk/testutils"]
+
+[package.metadata.stellar]
+network = "testnet"
